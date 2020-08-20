@@ -28,11 +28,13 @@ const styles = StyleSheet.create({
         width: "95%",
         //aspectRatio: 16 / 9,
         height: 200,
+
         //backgroundColor: 'yellow',
-        marginTop: 15,
+        marginTop: 25,
+        marginBottom: 50,
     },
     image: {
-        width: '100%',
+        width: '100%', 
         borderRadius: 5,
         aspectRatio: 16 /9,
     },
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
     },
     buttonTextContainer: {
         flexDirection: 'row',
-        backgroundColor: "gray",
+        backgroundColor: "#dcdcdc",
         justifyContent: "space-between"
     }
 })
