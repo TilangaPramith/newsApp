@@ -1,7 +1,7 @@
-import {combineReducer} from 'redux';
+import {combineReducers} from 'redux';
 import news from './news/news.reducer';
 
-const rootReducer = combineReducer({
+const rootReducer = combineReducers({
     news,
 })
 

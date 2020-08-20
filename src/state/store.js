@@ -4,13 +4,13 @@ import logger from 'redux-logger';
 import rootReducer from './root.reducer';
 import rootSaga from './root.saga';
 
-//const sagaMiddleware = createSagaMiddleware();
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
     rootReducer,
-    compose(applyMiddleware(logger)),
+    compose(applyMiddleware(logger, sagaMiddleware)),
 );
 
-//sagaMiddleware.run(rootSaga);
+sagaMiddleware.run(rootSaga);
 
-export default store;
+export default store; 

@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {connect} from 'react-redux';
 import { View, Text, StyleSheet } from 'react-native';
+import {getArticles} from '../../state/news/news.actions'
 import { ArticleCard } from '../../components';
 
-export default Home = () => {
+const Home = () => {
+
+    useEffect(()=>{
+        getArticles();
+    }, [])
+
     return (
         <View style = {styles.container}>
             <ArticleCard
@@ -14,6 +21,12 @@ export default Home = () => {
         </View>
     )
 }
+
+const mapStateProps = () => {
+    
+}
+
+export default connect(mapStateProps, {getArticles})(Home)
 
 const styles = StyleSheet.create({
     container:{
